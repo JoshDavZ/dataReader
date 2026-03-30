@@ -1,5 +1,5 @@
-import { reader } from './read-xlsx.mjs';
-import { renderData } from './dataRender.mjs';
+import { reader } from './read-xlsx.js';
+import { renderData } from './dataRender.js';
 import { filterByColumn, filterByMultipleColumns} from './dataFilters.js';
 import { SortByNumber,reduceBycolumn } from './Sort.js';
 
