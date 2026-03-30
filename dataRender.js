@@ -1,7 +1,9 @@
-function renderData(data, table) {
-    if (!data || !data.length) return;
+export function renderData(data, tableContainerId) {
+  console.log('Rendering data in', tableContainerId);
+    // if (!data || !data.length){console.log('No data to render'); return;}
+	  const container = document.getElementById(tableContainerId);
 
-    table = document.createElement('table');
+    const table = document.createElement('table');
     
     // Header row
     const header = document.createElement('tr');
@@ -11,7 +13,6 @@ function renderData(data, table) {
       header.appendChild(th);
     });
     table.appendChild(header);
-    console.log('Headers:', Object.keys(data[0]));
     
     // Data rows
     data.forEach(row => {
@@ -22,8 +23,7 @@ function renderData(data, table) {
         tr.appendChild(td);
       });
       table.appendChild(tr);
-      console.log('rows:', Object.keys(data));
     });
-    
-    document.body.appendChild(table);
+    container.appendChild(table);
   }
+
