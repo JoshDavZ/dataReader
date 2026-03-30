@@ -24,7 +24,7 @@ export class XLSXReader {
 
 export const reader = new XLSXReader();
 
-fetch('../dataTest.xlsx')
+fetch('dataTest.xlsx')
   .then(res => {
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     return res.arrayBuffer();
