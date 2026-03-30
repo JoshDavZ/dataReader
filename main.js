@@ -8,7 +8,7 @@ class XLSXRenderer {
 
   set data(jsonData) {
     this.#data = jsonData;
-    // this.render();
+    this.render();
   }
 
   get table() {
