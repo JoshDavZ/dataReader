@@ -5,7 +5,7 @@ import { SortByNumber,reduceBycolumn } from './Sort.js';
 
 reader.onReady((data) => {
   let DegradasiFO = filterByColumn(reader.data, 'rca', 'DEGRADASI FO', 'include');
-  DegradasiFO = reduceData(DegradasiFO, ['rca']);
+  DegradasiFO = reduceBycolumn(DegradasiFO, ['rca']);
   renderData(DegradasiFO, 'output2');
   
   
