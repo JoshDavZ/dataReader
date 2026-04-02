@@ -4,7 +4,7 @@ import { filterByColumn, filterByMultipleColumns} from './dataFilters.js';
 import { SortByNumber,reduceBycolumn } from './Sort.js';
 
 reader.onReady((data) => {
-  const DegradasiFO = filterByColumn(reader.data, 'rca', 'DEGRADASI FO', 'include');
+  let DegradasiFO = filterByColumn(reader.data, 'rca', 'DEGRADASI FO', 'include');
   DegradasiFO = reduceData(DegradasiFO, ['rca']);
   renderData(DegradasiFO, 'output2');
   
