@@ -6,18 +6,6 @@ import { SortByNumber,reduceBycolumn } from './Sort.js';
 reader.onReady((data) => {
   reader.data.forEach((row) => {
     if (row['detail_rca']!==null && row['detail_rca']!=='') {
-      row['count'] = filterByColumn(data, 'rca', row['detail_rca'], 'include').length;
-      // console.log('count for', row['detail_rca'], ':', row['count']);
-    }
-  });
-  
-  let DegradasiFO = filterByColumn(reader.data, 'rca', 'DEGRADASI FO', 'include');
-  DegradasiFO = reduceBycolumn(DegradasiFO, ['rca']);
-  renderData(DegradasiFO, 'output2');
-  
-  
-  reader.data.forEach((row) => {
-    if (row['detail_rca']!==null && row['detail_rca']!=='') {
     row['count'] = filterByColumn(data, 'rca', row['detail_rca'], 'include').length;
     console.log('count for', row['detail_rca'], ':', row['count']);
     }
